@@ -1,0 +1,29 @@
+{
+  "name": "rotory",
+  "version": "1.0.0",
+  "description": "An Angular based styleguide app.",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanakin/rotory.git"
+  },
+  "keywords": [
+    "styleguide",
+    "scss",
+    "angular",
+    "module",
+    "component",
+    "css",
+    "phpbb",
+    "scss"
+  ],
+  "author": "Mike Miday (hanakin)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hanakin/rotory/issues"
+  },
+  "homepage": "https://github.com/hanakin/rotory#readme"
+}

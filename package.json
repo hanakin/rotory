@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/hanakin/rotory/issues"
   },
-  "homepage": "https://github.com/hanakin/rotory#readme"
+  "homepage": "https://github.com/hanakin/rotory#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }

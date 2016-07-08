@@ -1,0 +1,27 @@
+{% macro a(value, class, iconLeft, iconRight) %}
+    <a class="o-btn{{ ' ' + class }}">
+        {% if iconLeft %}
+            <use xlink:href="#{{ iconLeft }}"></use>
+        {% endif %}
+        {{ value }}
+        {% if iconRight %}
+            <use xlink:href="#{{ iconRight }}"></use>
+        {% endif %}
+    </a>
+{% endmacro %}
+
+{% macro button(value, class, iconLeft, iconRight) %}
+    <button class="o-btn{{ ' ' + class }}">
+        {% if iconLeft %}
+            <use xlink:href="#{{ iconLeft }}"></use>
+        {% endif %}
+        {{ value }}
+        {% if iconRight %}
+            <use xlink:href="#{{ iconRight }}"></use>
+        {% endif %}
+    </button>
+{% endmacro %}
+
+{% macro input(value, class, type) %}
+    <input type="{{ type }}" class="o-btn{{ ' ' + class }}" value="{{ value }}" />
+{% endmacro %}

@@ -1,0 +1,18 @@
+    <div class="{{action}} partial">
+        <form role="form" method="post">
+            <fieldset>
+                <p>
+                    <input type="text" placeholder="Partial Name">
+                </p>
+                <p>
+                    <label for="select">Layer</label>
+                    <select name="select">
+                        <option ng-repeat="layer in layers" value="{{layer}}">{{layer}}</option>
+                    </select>
+                </p>
+                <p>
+                    <button type="submit" class="o-btn">{{action}}</button>
+                </p>
+            </fieldset>
+        </form>
+    </div>

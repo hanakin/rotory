@@ -27,6 +27,28 @@
   },
   "homepage": "https://github.com/hanakin/rotory#readme",
   "dependencies": {
-    "express": "^4.13.4"
+    "consolidate": "^0.14.1",
+    "express": "^4.13.4",
+    "jquery": "^3.0.0",
+    "node-walker": "^0.1.0",
+    "nodemon": "^1.9.2",
+    "swig": "^1.4.2",
+    "util": "^0.10.3",
+    "walker": "^1.0.7",
+    "when": "^3.7.7"
+  },
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-swig": "^0.8.0",
+    "mdi": "^1.6.50",
+    "stylelint": "^6.5.1",
+    "stylelint-config-standard": "^8.0.0",
+    "stylelint-scss": "^1.2.1"
   }
 }

@@ -1,0 +1,26 @@
+    <nav class="menu">
+        <ul class="menu-item-group" ng-repeat="layer in layers">
+            <li class="menu-item">
+                <a class="menu-link" href="#{{layer}}">
+                    <svg class="icon"><use xlink:href="#folder_open"></use></svg>
+                    {{layer}}
+                </a>
+                <a class="menu-action icon-green" href="#" title="Add Partial" ng-model="layerPartial">
+                    <svg class="icon"><use xlink:href="#control_point"></use></svg>
+                </a>
+            </li>
+            <li>
+                <ul class="menu-submenu">
+                    <li class="menu-submenu-item" ng-repeat="partial in partials[layer]">
+                        <a class="menu-link" href="#{{layer}}-{{partial}}">
+                            <svg class="icon"><use xlink:href="#code"></use></svg>
+                            {{partial}}
+                        </a>
+                        <a class="menu-action icon-red" href="#" title="Add Partial" ng-model="layerPartial">
+                            <svg class="icon"><use xlink:href="#remove_circle_outline"></use></svg>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>

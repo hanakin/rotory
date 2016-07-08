@@ -1,13 +1,15 @@
 {
-    "compiler-lang": "js",
-    "structure": [
-        "settings",
+    "style": "matbb",
+    "compiler": "js",
+    "layers": [
+        "setting",
+        "tool",
         "generic",
         "base",
-        "objects",
-        "components",
+        "object",
+        "component",
         "theme",
-        "utilties"
+        "utilities"
     ],
     "src": {
         "template": "template",

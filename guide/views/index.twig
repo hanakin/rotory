@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content=" ">
+    <meta name="author" content=" ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Styleguide</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="{{style}}/assets/css/style.min.css" media="all" />
+
+</head>
+<body ng-app="rotory">
+    {% include "./svg-sprite.twig" %}
+    {% include "./navbar.twig" %}
+    <div class="wrap">
+        {% include "./content.twig" %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="guide/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="guide/assets/js/vendor/prism.js"></script>
+    <script src="guide/assets/js/vendor/angular.js"></script>
+    <script src="guide/assets/js/app.js"></script>
+    <script src="guide/assets/js/services/data.js"></script>
+    <script src="guide/assets/js/controllers/nav.js"></script>
+    <script src="guide/assets/js/directives/sidenav.js"></script>
+    <script src="guide/assets/js/main.js"></script>
+</body>
+</html>

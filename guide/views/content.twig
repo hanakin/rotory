@@ -1,0 +1,195 @@
+    <div class="guide">
+        <section id="objects">
+            <h3 class="guide-section">
+                <a href="#" class="toggle">
+                    Objects
+                    <svg class="icon">
+                        <use xlink:href="#keyboard_arrow_down"></use>
+                    </svg>
+                </a>
+            </h3>
+            <div class="guide-partials">
+                <div class="guide-partial" id="objects-buttons">
+                    <h4>Button</h4>
+                    <p>
+                        This is a singleton object for setting the base styling for a button
+                    </p>
+
+                    <a class="o-btn">Anchor</a>
+                    <button class="o-btn">Button</button>
+                    <input type="submit" class="o-btn" value="Submit" />
+                    <input type="button" class="o-btn" value="Input Button" />
+                    <input type="reset" class="o-btn" value="Reset" />
+
+                    <div class="tabs">
+                        <nav class="tabs-nav">
+                            <a class="tabs-nav-item" href="#objects-button-html">HTML</a>
+                            <a class="tabs-nav-item" href="#objects-button-settings">Settings</a>
+                            <a class="tabs-nav-item" href="#objects-button-scss">SCSS</a>
+                        </nav>
+                        <div class="tabs-container">
+                            <div id="objects-button-html" class="tabs-section">
+                                <pre class="language-html">
+                                    <code>
+    &lt;a class="o-btn"&gt;Anchor&lt;/a&gt;
+    &lt;button class="o-btn">Button&lt;/button&gt;
+    &lt;input type="submit" class="o-btn" value="Submit" /&gt;
+    &lt;input type="button" class="o-btn" value="Input Button" /&gt;
+    &lt;input type="reset" class="o-btn" value="Reset" /&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <div id="objects-button-settings" class="tabs-section">
+                                <form class="" role="form">
+                                    <fieldset>
+                                        <legend>Layout Variables</legend>
+                                        <p>
+                                            <input type="text" placeholder="$btn-border-size: $default-border-size">
+                                        </p>
+                                        <p>
+                                            <input type="text" placeholder="$btn-padding: 1rem">
+                                        </p>
+                                        <p>
+                                            <input type="text" placeholder="$btn-border-radius: $default-border-radius">
+                                        </p>
+                                        <p>
+                                            <input type="text" placeholder="$btn-min-width: rem(64)">
+                                        </p>
+                                        <p>
+                                            <input type="text" placeholder="$btn-height: rem(38)">
+                                        </p>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <legend>Theme Variables</legend>
+                                        <p>
+                                            <input type="text" placeholder="$btn-background-color: $white">
+                                        </p>
+                                        <p>
+                                            <input type="text" placeholder="$btn-hover-color: $default-link-hover-color">
+                                        </p>
+                                        <p>
+                                            <input type="text" placeholder="$btn-active-color: $default-link-hover-color">
+                                        </p>
+                                        <p>
+                                            <input type="text" placeholder="$btn-focus-color: $default-link-hover-color">
+                                        </p>
+                                        <p>
+                                            <input type="text" placeholder="$btn-color: $gray-600">
+                                        </p>
+                                        <p>
+                                            <input type="text" placeholder="$btn-border-style: solid">
+                                        </p>
+                                        <p>
+                                            <input type="text" placeholder="$btn-border-color: $default-gray">
+                                        </p>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div id="objects-button-scss" class="tabs-section">
+                                <pre class="language-scss">
+                                    <code>
+    //
+    // 1. Allow us to style box model properties.
+    // 2. Line different sized buttons up a little nicer.
+    // 3. Make buttons inherit font styles (often necessary when styling `input`s as
+    //    buttons).
+    // 4. Reset/normalize some styles.
+    // 5. Force all button-styled elements to appear clickable.
+    // 6. Fixes odd inner spacing in IE7.
+    // 7. Subtract the border size from the padding value so that buttons do not
+    //    grow larger as we add borders.
+    // 8. Prevent button text from being selectable.
+    // 9. Most commonly we want specific sizing and alignment for icons in links
+    // as such we target tthe most common approaches to including icons
+    //
+    .o-btn {
+    @include type($type: 'button');
+    line-height: $btn-height; // google material design
+    text-align: center; // [4]
+    text-decoration: none; // [4]
+    vertical-align: middle; // [2]
+    white-space: nowrap; // bs only
+    background-color: $btn-background-color;
+    border-width: $btn-border-size;
+    border-style: $btn-border-style;
+    border-color: $btn-border-color;
+    border-radius: $btn-border-radius;
+    // @include shadow-2dp();
+    color: $btn-color;
+    outline: none; // google material design
+    cursor: pointer;
+    user-select: none; // [8]
+    display: inline-block; // [1]
+    margin: 0; // [4]
+    padding: 0 $btn-padding; // [7]
+    overflow: visible; // [6]
+    min-width: $btn-min-width; // google material design
+    transition:
+    box-shadow 0.2s $animation-curve-fast-out-linear-in,
+    background-color 0.2s $default-animation-curve,
+    color 0.2s $default-animation-curve; // google material design
+
+    // Icons [9]
+    i,
+    svg {
+    @include font-size(24px, false);
+    margin-right: 0.5rem;
+    }
+
+    i {
+    vertical-align: bottom;
+    }
+
+    svg {
+    vertical-align: middle;
+    }
+
+    // UI states
+    &:hover,
+    &:focus,
+    &:active {
+    text-decoration: none;  // [4]
+    color: $btn-color;
+    outline: none;
+    }
+
+    &:hover {
+    border-color: $btn-hover-color;
+    // @include shadow-4dp();
+    }
+
+    &:focus {
+    border-color: $btn-hover-color;
+    // @include focus-shadow();
+    }
+
+    &:active {
+    background-color: $btn-active-color;
+    background-image: none;
+    border-color: $btn-hover-color;
+    color: $btn-background-color;
+    // @include shadow-4dp();
+    }
+
+    &:disabled {
+    background-color: transparent;
+    box-shadow: none;
+    cursor: default;
+    }
+
+    // Remove excess padding and border in Firefox 4+
+    &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    }
+    }
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
